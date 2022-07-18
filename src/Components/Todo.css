@@ -55,8 +55,11 @@ body {
   font-weight: 500;
   margin-bottom: 0px;
 }
-.todo_name i {
+.todo_icons {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
 }

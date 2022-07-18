@@ -23,6 +23,13 @@ const Todo = () => {
     setMsg(removeItem);
   };
 
+  const editTodo = (data, index) => {
+    setInput(data.input);
+    const removeItem = [...msg];
+    removeItem.splice(index, 1);
+    setMsg(removeItem);
+  };
+
   return (
     <>
       <h1 className="todo_h1">Todo App</h1>
@@ -46,7 +53,16 @@ const Todo = () => {
           msg.map((data, index) => (
             <div className="todo_name" key={index}>
               <p>{data.input}</p>
-              <i className="fa fa-remove" onClick={() => removeTodo(index)}></i>
+              <div className="todo_icons">
+                <i
+                  className="fa fa-remove"
+                  onClick={() => removeTodo(index)}
+                ></i>
+                <i
+                  className="fa fa-edit"
+                  onClick={() => editTodo(data, index)}
+                ></i>
+              </div>
             </div>
           ))}
       </div>
