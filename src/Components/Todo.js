@@ -43,8 +43,7 @@ const Todo = () => {
             onChange={(e) => setInput(e.target.value)}
           />
           <button type="submit" className="todo_i">
-            {" "}
-            <i className="fa fa-plus "></i>
+            <i className="fa fa-plus"></i>
           </button>
         </form>
       </div>
